@@ -1,7 +1,7 @@
 import asyncio
 import time
 
-#create and run hello(i) ทั้งหมด 10 event ที่ทำงานพร้อมกัน
+#ใช้ async await และ asynciocreate and run hello(i) ทั้งหมด 10 event ที่ทำงานพร้อมกัน
 async def hello(i):
     print(f"{time.ctime()} hello {i} started")
     await asyncio.sleep(4)
