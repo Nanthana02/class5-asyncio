@@ -10,10 +10,7 @@ async def sum(name, numbers):
     total = 0
     for number in numbers:
         print(f'Task {name}: Computing {total}+{number}')  
-        sleep()  
-        total += number  
-    print(f'Task {name}: Sum = {total}\n')  
-
+        await sleep()
 start = time.time()  
 
 #สร้าง event loop 
@@ -30,15 +27,17 @@ loop.run_until_complete(asyncio.wait(tasks))
 loop.close()
 
 end = time.time()
-print(f'Time: {end-start:.2}')
+print(f'Time: {end-start:.2} sec')
 
 #
-# Task A: Computing 1+2
-# Task A: Sum = 3
-
+# Task A: Computing 0+1
+# Time: 0.00
+# Task A: Computing 0+2
+# Time: 1.02
 # Task B: Computing 0+1
-# Task B: Computing 1+2
-# Task B: Computing 3+3
-# Task B: Sum = 6
-
-# Time: 0.019
+# Time: 2.03
+# Task B: Computing 0+2
+# Time: 3.04
+# Task B: Computing 0+3
+# Time: 4.05
+# Time: 5.1 sec
