@@ -20,3 +20,9 @@ if __name__ == '__main__':
     asyncio.run(main())
     end = time.time()
     print(f'Time: {end-start:.2f} sec')
+
+# Wed Jul 26 14:58:47 2023 hello 1 started
+# Wed Jul 26 14:58:47 2023 hello 2 started
+# Wed Jul 26 14:58:51 2023 hello 1 done
+# Wed Jul 26 14:58:51 2023 hello 2 done
+# Time: 4.01 sec
